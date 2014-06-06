@@ -44,8 +44,7 @@ namespace DormitoryNetworkFlowQuerier
         private HttpWebRequest request;
         private HttpWebResponse response;
         private Stream resStream;
-        private StreamReader reader;
-        private DateTime date = DateTime.Now;
+        private StreamReader reader;        
 
         string today, hour, txtContent;
 
@@ -82,6 +81,8 @@ namespace DormitoryNetworkFlowQuerier
         // 取得今天使用者的資料
         private void GetToday()
         {
+            DateTime date = DateTime.Now;
+
             Clean();
 
             tbIP.Text = userIP.ToString();
@@ -183,6 +184,11 @@ namespace DormitoryNetworkFlowQuerier
         private void lbSingle9_Click(object sender, EventArgs e)
         {
             Process.Start("http://single9.net");
+        }
+
+        private void lbFrom_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://netflow2.stu.edu.tw/dorm_flow/");
         }
     }
 }

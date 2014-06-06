@@ -263,7 +263,7 @@
             // lbFrom
             // 
             this.lbFrom.AutoSize = true;
-            this.lbFrom.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbFrom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbFrom.Font = new System.Drawing.Font("微軟正黑體", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lbFrom.ForeColor = System.Drawing.Color.LightGray;
             this.lbFrom.Location = new System.Drawing.Point(16, 304);
@@ -271,6 +271,7 @@
             this.lbFrom.Size = new System.Drawing.Size(192, 15);
             this.lbFrom.TabIndex = 12;
             this.lbFrom.Text = "Data via STU Dorm Network System";
+            this.lbFrom.Click += new System.EventHandler(this.lbFrom_Click);
             // 
             // Main
             // 
