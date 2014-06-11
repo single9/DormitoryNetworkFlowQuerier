@@ -16,7 +16,7 @@ using System.Diagnostics;
  * 製作者: Duye Chen
  * 網站: http://single9.net
  * 最近修改者: Duye Chen
- * 最近修改日: 2012/10/11
+ * 最近修改日: 2014/06/11
  * 程式說明: 本程式用於查詢樹德科技大學住宿者
  * 之網路使用量，資料來源為樹德科大電算中心的
  * 紀錄，為官方所統計資料，更新時間為每小時。
@@ -27,7 +27,7 @@ namespace DormitoryNetworkFlowQuerier
     public partial class Main : Form
     {
         // 獲取使用者IP位址
-        private IPAddress userIP = Dns.Resolve(Dns.GetHostName()).AddressList[0];
+        private IPAddress userIP = Dns.GetHostEntry(Dns.GetHostName()).AddressList[3];
         public Main()
         {
             InitializeComponent();
